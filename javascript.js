@@ -21,8 +21,12 @@ function winCheck() {
 }
 
 function playRound(playerSelection, computerSelection) {
+  playerSelection = prompt("Please Enter 'Rock', 'Paper', or 'Scissors'!");
+  
   playerSelection = playerSelection.toLowerCase();
   computerSelection = getComputerChoice();
+
+  
   
   if (playerSelection == "rock" && computerSelection == "scissors") {
     winRound();
@@ -52,23 +56,14 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
- playerSelection = prompt("Please Enter 'Rock', 'Paper', or 'Scissors'!");
- console.log(playRound(playerSelection));
  
- playerSelection = prompt("ROUND 2: Please Enter 'Rock', 'Paper', or 'Scissors'!");
- console.log(playRound(playerSelection));
- 
- playerSelection = prompt("ROUND 3: Please Enter 'Rock', 'Paper', or 'Scissors'!");
- console.log(playRound(playerSelection));
+ console.log(playRound());
+ console.log(playRound());
+ console.log(playRound());
+ console.log(playRound());
+ console.log(playRound());
  winCheck();
  
- playerSelection = prompt("ROUND 4: Please Enter 'Rock', 'Paper', or 'Scissors'!");
- console.log(playRound(playerSelection));
- winCheck();
- 
- playerSelection = prompt("ROUND 5: Please Enter 'Rock', 'Paper', or 'Scissors'!");
- console.log(playRound(playerSelection));
- winCheck();
  
 
 }
