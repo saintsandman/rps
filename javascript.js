@@ -7,21 +7,18 @@ function getComputerChoice() {
   
 }
 
-let score = 0;
+let win = 0;
+let loss = 0
+
 
 function winRound() {
-  return score = ++score;
+  return win = ++win;
 }
 
-function winCheck() {
-  if (score == 3) {
-    return console.log("You win the game!");
-  } else{
-    return console.log ("You've lost the game :(")
-  }
-
-    
+function loseRound() {
+  return loss = ++loss;
 }
+
 
 function playRound(playerSelection, computerSelection) {
   playerSelection = prompt("Please Enter 'Rock', 'Paper', or 'Scissors'!");
@@ -35,18 +32,21 @@ function playRound(playerSelection, computerSelection) {
     winRound();
     return "You Win! Rock beats Scissors!";
   } else if (playerSelection == "rock" && computerSelection == "paper") {
+    loseRound();
     return "You Lose! Paper beats Rock!";
 
   } else if (playerSelection == "paper" && computerSelection == "rock") {
     winRound();
     return "You Win! Paper beats Rock!";
   } else if (playerSelection == "paper" && computerSelection == "scissors") {
+    loseRound();
     return "You Lose! Scissors beats Paper!";
  
   } else if (playerSelection == "scissors" && computerSelection == "paper") {
     winRound();
     return "You Win! Scissors beats Paper!";
   } else if (playerSelection == "scissors" && computerSelection == "rock") {
+    loseRound();
     return "You Lose! Rock beats Paper!";
 
   } else if (playerSelection == computerSelection) {
@@ -65,9 +65,25 @@ function game() {
  console.log(playRound());
  console.log(playRound());
  console.log(playRound());
+ if (win == 3) {
+    return console.log("You won the game :D")
+ } else if (loss == 3){
+   return console.log("You lost the game ;-;");
+ }
+   
  console.log(playRound());
+ if (win == 3) {
+    return console.log("You won the game :D")
+ } else if (loss == 3){
+   return console.log("You lost the game ;-;");
+ }
  console.log(playRound());
- winCheck();
+ if (win == 3) {
+    return console.log("You won the game :D")
+ } else if (loss == 3){
+   return console.log("You lost the game ;-;");
+ }
+ 
  
  
 
