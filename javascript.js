@@ -54,7 +54,8 @@ function playRound(playerSelection, computerSelection) {
     return playRound();
 
   } else {
-    return "Invalid. Please enter 'Rock', 'Paper', or 'Scissors' :3";
+    console.log ("Invalid. Please enter 'Rock', 'Paper', or 'Scissors' :3");
+    return playRound();
   }
 
 }
