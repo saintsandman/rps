@@ -15,8 +15,11 @@ function winRound() {
 
 function winCheck() {
   if (score == 3) {
-  return console.log("You win the game!");
+    return console.log("You win the game!");
+  } else{
+    return console.log ("You've lost the game :(")
   }
+
     
 }
 
@@ -47,7 +50,8 @@ function playRound(playerSelection, computerSelection) {
     return "You Lose! Rock beats Paper!";
 
   } else if (playerSelection == computerSelection) {
-    return "It's a tie! Try again!";
+    console.log("It's a tie! Try again!")
+    return playRound();
 
   } else {
     return "Invalid. Please enter 'Rock', 'Paper', or 'Scissors' :3";
