@@ -42,7 +42,19 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
  playerSelection = prompt("Please Enter 'Rock', 'Paper', or 'Scissors'!");
+ console.log(playRound(playerSelection));
  
+ playerSelection = prompt("ROUND 2: Please Enter 'Rock', 'Paper', or 'Scissors'!");
+ console.log(playRound(playerSelection));
+ 
+ playerSelection = prompt("ROUND 3: Please Enter 'Rock', 'Paper', or 'Scissors'!");
+ console.log(playRound(playerSelection));
+ 
+ playerSelection = prompt("ROUND 4: Please Enter 'Rock', 'Paper', or 'Scissors'!");
+ console.log(playRound(playerSelection));
+ 
+ playerSelection = prompt("ROUND 5: Please Enter 'Rock', 'Paper', or 'Scissors'!");
  console.log(playRound(playerSelection));
 }
+
 
