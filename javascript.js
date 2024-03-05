@@ -60,33 +60,6 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-function game() {
- 
- console.log(playRound());
- console.log(playRound());
- console.log(playRound());
- if (win == 3) {
-    return console.log("You won the game :D")
- } else if (loss == 3){
-   return console.log("You lost the game ;-;");
- }
-   
- console.log(playRound());
- if (win == 3) {
-    return console.log("You won the game :D")
- } else if (loss == 3){
-   return console.log("You lost the game ;-;");
- }
- console.log(playRound());
- if (win == 3) {
-    return console.log("You won the game :D")
- } else if (loss == 3){
-   return console.log("You lost the game ;-;");
- }
- 
- 
- 
 
-}
 
 
