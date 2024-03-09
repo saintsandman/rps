@@ -61,5 +61,10 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
+/* 
+create a button for rock (in js or htmL?)
+select that button in js (put it in a variable? how again?)
+make event listener for rock button 
+when pressed, it does playround function with "rock" as selection
 
-
+*/
