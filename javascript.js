@@ -67,7 +67,8 @@ const btn = document.querySelectorAll("button.choice");
 
 btn.forEach((button) => {
   
-  button.onclick = () => console.log(button);
+
+  button.addEventListener("click", () => console.log(button));
 
   }
 )
