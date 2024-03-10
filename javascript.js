@@ -60,11 +60,26 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
+const btn = document.querySelectorAll("button.choice");
+
+
+
+
+btn.forEach((button) => {
+  
+  button.onclick = () => console.log(button);
+
+  }
+)
 
 /* 
-create a button for rock (in js or htmL?)
-select that button in js (put it in a variable? how again?)
-make event listener for rock button 
+create a button for rps
+add class to buttons
+select the buttons in js and put into variable
+if you click a button, then it inputs the text content of the id of the button into the play round function
+make it so that it puts the text of the specific button into playround playerselection
+
+
 when pressed, it does playround function with "rock" as selection
 
 */
