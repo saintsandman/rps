@@ -68,7 +68,7 @@ const btn = document.querySelectorAll("button.choice");
 btn.forEach((button) => {
   
 
-  button.addEventListener("click", () => console.log(button));
+  button.addEventListener("click", () => console.log(button.id));
 
   }
 )
@@ -78,7 +78,8 @@ create a button for rps
 add class to buttons
 select the buttons in js and put into variable
 if you click a button, then it inputs the text content of the id of the button into the play round function
-make it so that it puts the text of the specific button into playround playerselection
+make it so that it gets the id of the button
+it puts it into playround playerselection
 
 
 when pressed, it does playround function with "rock" as selection
