@@ -20,11 +20,11 @@ function loseRound() {
 }
 
 
-function playRound(playerSelection, computerSelection) {
-  playerSelection = prompt("Please Enter 'Rock', 'Paper', or 'Scissors'!");
+function playRound(playerSelection) {
+ 
   
-  playerSelection = playerSelection.toLowerCase();
-  computerSelection = getComputerChoice();
+  
+  let computerSelection = getComputerChoice();
 
   
   
@@ -67,8 +67,9 @@ const btn = document.querySelectorAll("button.choice");
 
 btn.forEach((button) => {
   
+  let choice = String(button.id);
 
-  button.addEventListener("click", () => console.log(button.id));
+  button.addEventListener("click", () => console.log(choice));
 
   }
 )
