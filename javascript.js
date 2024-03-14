@@ -30,32 +30,32 @@ function playRound(playerSelection) {
   
   if (playerSelection == "rock" && computerSelection == "scissors") {
     winRound();
-    return "You Win! Rock beats Scissors!";
+    return console.log("You Win! Rock beats Scissors!");
   } else if (playerSelection == "rock" && computerSelection == "paper") {
     loseRound();
-    return "You Lose! Paper beats Rock!";
+    return console.log("You Lose! Paper beats Rock!");
 
   } else if (playerSelection == "paper" && computerSelection == "rock") {
     winRound();
-    return "You Win! Paper beats Rock!";
+    return console.log("You Win! Paper beats Rock!");
   } else if (playerSelection == "paper" && computerSelection == "scissors") {
     loseRound();
-    return "You Lose! Scissors beats Paper!";
+    return console.log("You Lose! Scissors beats Paper!");
  
   } else if (playerSelection == "scissors" && computerSelection == "paper") {
     winRound();
-    return "You Win! Scissors beats Paper!";
+    return console.log("You Win! Scissors beats Paper!");
   } else if (playerSelection == "scissors" && computerSelection == "rock") {
     loseRound();
-    return "You Lose! Rock beats Paper!";
+    return console.log("You Lose! Rock beats Paper!");
 
   } else if (playerSelection == computerSelection) {
     console.log("It's a tie! Try again!")
-    return playRound();
+    return;
 
   } else {
     console.log ("Invalid. Please enter 'Rock', 'Paper', or 'Scissors' :3");
-    return playRound();
+    return;
   }
 
 }
@@ -66,13 +66,12 @@ const btn = document.querySelectorAll("button.choice");
 
 
 btn.forEach((button) => {
-  
-  let choice = String(button.id);
 
-  button.addEventListener("click", () => console.log(choice));
+  button.addEventListener("click", () => {
+    playRound("rock");
+  });
 
-  }
-)
+  });
 
 /* 
 create a button for rps
