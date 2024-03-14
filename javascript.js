@@ -68,7 +68,7 @@ const btn = document.querySelectorAll("button.choice");
 btn.forEach((button) => {
 
   button.addEventListener("click", () => {
-    playRound("rock");
+    playRound(button.id);
   });
 
   });
