@@ -81,7 +81,7 @@ if you click a button, then it inputs the text content of the id of the button i
 make it so that it gets the id of the button
 it puts it into playround playerselection
 
-
-when pressed, it does playround function with "rock" as selection
+make an empty div for displaying results (win vs loss)
+announce if you won or lost in another div
 
 */
