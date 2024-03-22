@@ -63,28 +63,26 @@ function playRound(playerSelection) {
 const btn = document.querySelectorAll("button.choice");
 
 
+function changeScore() {
+  document.querySelector("#win").textContent = win;
+}
 
 
 btn.forEach((button) => {
 
   button.addEventListener("click", () => {
     playRound(button.id);
+    changeScore();
   });
 
   });
 
 
-document.querySelector("#win").textContent = win;
+
+
+
 
 /* 
-create a button for rps
-add class to buttons
-select the buttons in js and put into variable
-if you click a button, then it inputs the text content of the id of the button into the play round function
-make it so that it gets the id of the button
-it puts it into playround playerselection
-
-make an empty div for displaying results (win vs loss)
-announce if you won or lost in another div
+when the score changes, update the variable. 
 
 */
