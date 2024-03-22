@@ -73,6 +73,9 @@ btn.forEach((button) => {
 
   });
 
+
+document.querySelector("#win").textContent = win;
+
 /* 
 create a button for rps
 add class to buttons
