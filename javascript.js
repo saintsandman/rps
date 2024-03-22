@@ -65,6 +65,7 @@ const btn = document.querySelectorAll("button.choice");
 
 function changeScore() {
   document.querySelector("#win").textContent = win;
+  document.querySelector("#loss").textContent = loss;
 }
 
 
