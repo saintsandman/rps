@@ -8,7 +8,7 @@ function getComputerChoice() {
 }
 
 let win = 0;
-let loss = 0
+let loss = 0;
 
 
 function winRound() {
@@ -18,6 +18,8 @@ function winRound() {
 function loseRound() {
   return loss = ++loss;
 }
+
+result = document.querySelector("#result");
 
 
 function playRound(playerSelection) {
@@ -30,31 +32,31 @@ function playRound(playerSelection) {
   
   if (playerSelection == "rock" && computerSelection == "scissors") {
     winRound();
-    return console.log("You Win! Rock beats Scissors!");
+    return result.textContent = "You Win! Rock beats Scissors!";
   } else if (playerSelection == "rock" && computerSelection == "paper") {
     loseRound();
-    return console.log("You Lose! Paper beats Rock!");
+    return result.textContent = "You Lose! Paper beats Rock!";
 
   } else if (playerSelection == "paper" && computerSelection == "rock") {
     winRound();
-    return console.log("You Win! Paper beats Rock!");
+    return result.textContent = "You Win! Paper beats Rock!";
   } else if (playerSelection == "paper" && computerSelection == "scissors") {
     loseRound();
-    return console.log("You Lose! Scissors beats Paper!");
+    return result.textContent = "You Lose! Scissors beats Paper!";
  
   } else if (playerSelection == "scissors" && computerSelection == "paper") {
     winRound();
-    return console.log("You Win! Scissors beats Paper!");
+    return result.textContent = "You Win! Scissors beats Paper!";
   } else if (playerSelection == "scissors" && computerSelection == "rock") {
     loseRound();
-    return console.log("You Lose! Rock beats Paper!");
+    return result.textContent = "You Lose! Rock beats Paper!";
 
   } else if (playerSelection == computerSelection) {
-    console.log("It's a tie! Try again!")
+    result.textContent = "It's a tie! Try again!";
     return;
 
   } else {
-    console.log ("Invalid. Please enter 'Rock', 'Paper', or 'Scissors' :3");
+    result.textContent = "Invalid. Please enter 'Rock', 'Paper', or 'Scissors' :3";
     return;
   }
 
@@ -63,7 +65,7 @@ function playRound(playerSelection) {
 const btn = document.querySelectorAll("button.choice");
 
 
-function changeScore() {
+function updateScore() {
   document.querySelector("#win").textContent = win;
   document.querySelector("#loss").textContent = loss;
 }
@@ -73,7 +75,7 @@ btn.forEach((button) => {
 
   button.addEventListener("click", () => {
     playRound(button.id);
-    changeScore();
+    updateScore();
   });
 
   });
@@ -84,6 +86,8 @@ btn.forEach((button) => {
 
 
 /* 
-when the score changes, update the variable. 
+display result texts in dom
+display if won or loss once one reaches 5 points
+reset on next button press.
 
 */
