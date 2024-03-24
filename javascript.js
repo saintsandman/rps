@@ -88,7 +88,7 @@ function resetScore() {
   if ((win == 5) || (loss == 5)) {
     win = 0;
     loss = 0;
-    verdict.textContent = undefined;
+    verdict.textContent = "";
   }
 }
 
@@ -101,22 +101,3 @@ btn.forEach((button) => {
   });
 
   });
-
-
-
-
-
-
-
-
-
-
-
-/* 
-display if won or loss once one reaches 5 points
-
-so like, if win is 5 then display "You Won! Select an option to play again."
-
-reset on next button press.
-
-*/
