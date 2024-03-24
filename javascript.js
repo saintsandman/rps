@@ -81,13 +81,19 @@ btn.forEach((button) => {
   });
 
 
+verdict = document.createElement("div");
+verdict.setAttribute("id", "verdict");
+document.body.appendChild(verdict);
 
+verdict.textContent = "HI";
 
 
 
 /* 
-display result texts in dom
 display if won or loss once one reaches 5 points
+
+so like, if win is 5 then display "You Won! Select an option to play again."
+
 reset on next button press.
 
 */
