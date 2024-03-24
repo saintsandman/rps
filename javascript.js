@@ -68,6 +68,14 @@ const btn = document.querySelectorAll("button.choice");
 function updateScore() {
   document.querySelector("#win").textContent = win;
   document.querySelector("#loss").textContent = loss;
+
+  if (win == 5) {
+    verdict.textContent = "You won the game! Select an option to play again.";
+  }
+
+  if (loss == 5) {
+    verdict.textContent = "You lost the game! Select an option to play again.";
+  }
 }
 
 
@@ -85,7 +93,10 @@ verdict = document.createElement("div");
 verdict.setAttribute("id", "verdict");
 document.body.appendChild(verdict);
 
-verdict.textContent = "HI";
+
+
+
+
 
 
 
