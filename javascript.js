@@ -64,8 +64,14 @@ function playRound(playerSelection) {
 
 const btn = document.querySelectorAll("button.choice");
 
+verdict = document.createElement("div");
+verdict.setAttribute("id", "verdict");
+document.body.appendChild(verdict);
+
 
 function updateScore() {
+
+  
   document.querySelector("#win").textContent = win;
   document.querySelector("#loss").textContent = loss;
 
@@ -78,10 +84,18 @@ function updateScore() {
   }
 }
 
+function resetScore() {
+  if ((win == 5) || (loss == 5)) {
+    win = 0;
+    loss = 0;
+    verdict.textContent = undefined;
+  }
+}
 
 btn.forEach((button) => {
 
   button.addEventListener("click", () => {
+    resetScore();
     playRound(button.id);
     updateScore();
   });
@@ -89,9 +103,7 @@ btn.forEach((button) => {
   });
 
 
-verdict = document.createElement("div");
-verdict.setAttribute("id", "verdict");
-document.body.appendChild(verdict);
+
 
 
 
